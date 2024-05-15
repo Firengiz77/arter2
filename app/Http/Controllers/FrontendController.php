@@ -3,12 +3,62 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-
+use App\Models\Blog;
+use App\Models\About;
+use App\Models\Service;
+use App\Models\Counter;
+use App\Models\AboutDetail;
+use App\Models\HowItWork;
+use App\Models\Customer;
+use App\Models\Partner;
+use App\Models\Faq;
 class FrontendController extends Controller
 {
 
 
+    public function index(){
+        return view('front.pages.index');
+    }
+
+    public function about(){
+        $about = About::first();
+        $counter = Counter::get();
+        $detail = AboutDetail::get();
+        $works = HowItWork::get();
+        $customer = Customer::get();
+        $partners = Partner::get();
+        $faq = Faq::get();
+        return view('front.pages.about',compact('about','counter','detail','works','customer','partners','faq'));
+    }
+
+    public function contact(){
+        return view('front.pages.contact');
+    }
+
+    public function blogs(){
+        $blogs = Blog::get();
+        return view('front.pages.blogs',compact('blogs'));
+    }
+
+    public function blog_single($slug){
+        $blog = Blog::where('slug->'.app()->getLocale(),$slug)->first();
+        return view('front.pages.blog_single',compact('blog'));
+    }
+
+    public function services(){
+        $services = Service::get();
+        return view('front.pages.services',compact('services'));
+    }
+
+    public function service_single($slug){
+        $service = Service::where('slug->'.app()->getLocale(),$slug)->first();
+        return view('front.pages.service_single',compact('service'));
+    }
+
+
+
+
+    
 
 
 public function search(Request $request){
@@ -24,11 +74,6 @@ public function search(Request $request){
 
 }
 
-
-    public function contact(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|null
-    {
-        return view('front.pages.contact');
-    }
 
 
     public function contact_send(Request $request)
@@ -63,24 +108,6 @@ public function search(Request $request){
 
         return redirect()->back()->with('success', __('Successfully Subscription') );
     }
-
-    public function appointment(Request $request){
-
-        $appointment = new Appointment();
-        
-        $appointment->name = $request->name;
-        $appointment->company = $request->company;
-        $appointment->employee = $request->employee;
-        $appointment->busines = $request->busines;
-        $appointment->phone = $request->phone;
-        $appointment->desc = $request->desc;
-        $appointment->email = $request->email;
-        $appointment->save();
-
-        return redirect()->back()->with('success', __('Successfully Sended Message') );
-    }
-
-
 
 
 

@@ -44,8 +44,6 @@
 
 
                                     <td><?php echo e($blog->title); ?></td>
-
-
                                         <td>
                                             <?php echo e(\App\Models\Utility::dateFormat($blog->created_at)); ?>
 

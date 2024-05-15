@@ -82,8 +82,6 @@
 
 
 
-
-
                                 </div>
                                 <div class="form-group col-12 d-flex justify-content-end col-form-label">
                                     <input onclick="history.back()" type="button" value="{{ __('Cancel') }}" class="btn btn-secondary btn-light"

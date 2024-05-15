@@ -18,11 +18,11 @@
 @push('script-page')
     <script src="{{ asset('custom/libs/summernote/summernote-bs4.js') }}"></script>
 @endpush
-@section('action-btn')
+<!-- @section('action-btn')
     <a href="{{ route('about.create') }}" class="btn btn-sm btn-icon  btn-primary me-2 text-white"  data-title="{{ __('Create New About') }}"  data-bs-toggle="tooltip" data-bs-placement="top" title="{{ __('Create') }}">
         <i  data-feather="plus"></i>
     </a>
-@endsection
+@endsection -->
 @section('filter')
 @endsection
 @section('content')
