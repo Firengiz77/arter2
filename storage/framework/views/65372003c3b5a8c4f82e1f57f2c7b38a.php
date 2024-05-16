@@ -54,19 +54,7 @@
                                                 <a href="<?php echo e(route('maininformation.edit', $maininformation->id)); ?>" class="btn btn-sm btn-icon  bg-light-secondary me-2"  data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo e(__('Edit')); ?>">
                                                     <i  class="ti ti-edit f-20"></i>
                                                 </a>
-                                                    <a class="bs-pass-para btn btn-sm btn-icon bg-light-secondary" href="#"
-                                                        data-title="<?php echo e(__('Delete Lead')); ?>"
-                                                        data-confirm="<?php echo e(__('Are You Sure?')); ?>"
-                                                        data-text="<?php echo e(__('This action can not be undone. Do you want to continue?')); ?>"
-                                                        data-confirm-yes="delete-form-<?php echo e($maininformation->id); ?>"
-                                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                                        title="<?php echo e(__('Delete')); ?>">
-                                                        <i class="ti ti-trash f-20"></i>
-                                                    </a>
-                                                    <?php echo Form::open(['method' => 'DELETE', 'route' => ['maininformation.destroy', $maininformation->id], 'id' => 'delete-form-' . $maininformation->id]); ?>
-
-                                                    <?php echo Form::close(); ?>
-
+                                               
                                             </div>
                                         </td>
                                     </tr>

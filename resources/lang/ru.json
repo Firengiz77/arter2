@@ -3,7 +3,7 @@
     "route.projects": "proyekti",
     "route.about": "o-nas",
     "route.blogs": "bloqi",
-    "route.blog": "bloqi",
+    "route.blog_single": "bloqi",
     "route.videos": "video",
     "route.news": "novosti",
     "route.partners": "partneri",
@@ -13,6 +13,8 @@
     "route.news_single": "novosti",
     "route.service_single": "servis",
     "route.project_single": "proyekti",
+    "route.services": "serviss",
+
 
   "   added to cart successfully!" : "   добавлено в корзину успешно! ",
   " (%)" : " (%) ",

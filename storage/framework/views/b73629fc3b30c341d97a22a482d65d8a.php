@@ -22,7 +22,7 @@
           <?php $__currentLoopData = $blogs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               
             <div class="col-lg-4"> 
-              <div class="cardNews wow fadeInUp"><a href="blog-single.html">
+              <div class="cardNews wow fadeInUp"><a href="<?php echo e(route(app()->getLocale().'.blog_single',$item->slug)); ?>">
                   <div class="cardImage">
                     <div class="datePost">
                       <div class="heading-52-medium color-white"><?php echo e(date('d', strtotime($item->created_at))); ?>.</div>
@@ -34,9 +34,10 @@
                     <?php $__currentLoopData = $item->tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <a href="#"><?php echo e($tag->title); ?></a> 
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                
                     
                 </div><a class="color-white" href="<?php echo e(route(app()->getLocale().'.blog_single',$item->slug)); ?>">
-                    <h3 class="text-20-medium color-white mb-20"><?php echo e($item->title); ?></h3></a><a class="cardLink btn btn-arrow-up" href="blog-single.html">
+                    <h3 class="text-20-medium color-white mb-20"><?php echo e($item->title); ?></h3></a><a class="cardLink btn btn-arrow-up" href="<?php echo e(route(app()->getLocale().'.blog_single',$item->slug)); ?>">
                     <svg class="icon-16" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
                     </svg></a>
@@ -55,22 +56,7 @@
             <nav class="box-pagination">
               <ul class="pagination">
 
-
-
-                <li class="page-item"><a class="page-link page-prev" href="#">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
-                    </svg></a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link active" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">10</a></li>
-                <li class="page-item"><a class="page-link page-next" href="#">
-                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                    </svg></a></li>
-
+              <?php echo e($blogs->links('vendor.pagination.customBlog')); ?>
 
 
               </ul>

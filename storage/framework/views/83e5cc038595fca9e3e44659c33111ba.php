@@ -15,11 +15,11 @@
             <div class="col-lg-3 width-20">
               <h5 class="text-18-medium color-white mb-20 wow fadeInUp">Company</h5>
               <ul class="menu-footer wow fadeInUp">
-                <li><a href="#">About us</a></li>
+                <li><a href="<?php echo e(route(app()->getLocale().'.about')); ?>">About us</a></li>
                 <li><a href="#">Our offerings</a></li>
                 <li><a href="#">Newsroom</a></li>
                 <li><a href="#">Investors</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="<?php echo e(route(app()->getLocale().'.blogs')); ?>">Blog</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Gift cards</a></li>
               </ul>
@@ -27,11 +27,10 @@
             <div class="col-lg-3 width-20 mb-30">
               <h5 class="text-18-medium color-white mb-20 wow fadeInUp">Top cities</h5>
               <ul class="menu-footer wow fadeInUp">
-                <li><a href="about.html">New York</a></li>
-                <li><a href="our-team.html">London</a></li>
-                <li><a href="#">Berlin</a></li>
-                <li><a href="#">Los Angeles</a></li>
-                <li><a href="#">Paris</a></li>
+                <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li><a href=""><?php echo e($item->name); ?></a></li>
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+               
               </ul>
             </div>
             <div class="col-lg-3 width-20 mb-30">

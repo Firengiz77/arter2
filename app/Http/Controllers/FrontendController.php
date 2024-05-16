@@ -12,6 +12,8 @@ use App\Models\HowItWork;
 use App\Models\Customer;
 use App\Models\Partner;
 use App\Models\Faq;
+use App\Models\Contact;
+
 class FrontendController extends Controller
 {
 
@@ -32,21 +34,25 @@ class FrontendController extends Controller
     }
 
     public function contact(){
-        return view('front.pages.contact');
+        $contact = Contact::get();
+        return view('front.pages.contact',compact('contact'));
     }
 
     public function blogs(){
-        $blogs = Blog::get();
+        $blogs = Blog::paginate(1);
         return view('front.pages.blogs',compact('blogs'));
     }
 
     public function blog_single($slug){
+   
         $blog = Blog::where('slug->'.app()->getLocale(),$slug)->first();
-        return view('front.pages.blog_single',compact('blog'));
+        $blogs = Blog::take(9)->get();
+      
+        return view('front.pages.blog_single',compact('blog','blogs'));
     }
 
     public function services(){
-        $services = Service::get();
+        $services = Service::paginate(1);
         return view('front.pages.services',compact('services'));
     }
 

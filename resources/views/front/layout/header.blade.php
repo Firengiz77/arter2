@@ -37,12 +37,12 @@
             <div class="header-nav">
               <nav class="nav-main-menu d-none d-xl-block">
                 <ul class="main-menu">
-                  <li><a class="active" href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a class="active" href="{{ route('index') }}">Home</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.about') }}">About</a></li>
                   <li><a href="fleet-list-4.html">Our Fleet</a></li>
-                  <li><a href="service-grid.html">Services</a></li>
-                  <li><a href="blog-grid.html">Blog</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.services') }}">Services</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.blogs') }}">Blog</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.contact') }}">Contact</a></li>
                 </ul>
               </nav>
               <div class="burger-icon burger-icon-white"><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
@@ -62,12 +62,12 @@
             <div class="mobile-menu-wrap mobile-header-border">
               <nav class="mt-15">
                 <ul class="mobile-menu font-heading">
-                  <li><a class="active" href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a class="active" href="{{ route('index') }}">Home</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.about') }}">About</a></li>
                   <li><a href="fleet-list-4.html">Our Fleet</a></li>
-                  <li><a href="service-grid.html">Services</a></li>
-                  <li><a href="blog-grid.html">Blog</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.services') }}">Services</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.blogs') }}">Blog</a></li>
+                  <li><a href="{{ route(app()->getLocale().'.contact') }}">Contact</a></li>
                   <li><a href="login.html">Login</a></li>
                   <li><a href="register.html">Sign Up</a></li>
                 </ul>

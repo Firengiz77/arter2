@@ -3,7 +3,7 @@
     "route.projects": "layiheler",
     "route.about": "haqqimizda",
     "route.blogs": "bloqlar",
-    "route.blog": "bloq",
+    "route.blog_single": "bloq",
     "route.videos": "videolar",
     "route.news": "xeberler",
     "route.partners": "terefdaslar",
@@ -12,6 +12,7 @@
     "route.equipments": "avadanliqlar",
     "route.news_single": "xeber",
     "route.service_single": "xidmet",
+    "route.services": "xidmetler",
     "route.project_single": "layihe",
 
 

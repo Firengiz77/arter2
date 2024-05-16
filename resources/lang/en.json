@@ -3,7 +3,7 @@
     "route.projects": "projects",
     "route.about": "about",
     "route.blogs": "blogs",
-    "route.blog": "blog",
+    "route.blog_single": "blog",
     "route.videos": "videos",
     "route.news": "news",
     "route.partners": "partners",
@@ -12,6 +12,7 @@
     "route.equipments": "equipments",
     "route.news_single": "new",
     "route.service_single": "service",
+    "route.services": "services",
     "route.project_single": "project",
 
 

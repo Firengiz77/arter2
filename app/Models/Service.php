@@ -44,6 +44,17 @@ class Service extends Model
     public function getCategory(){
         return $this->hasOne(Category::class,'id','category_id');
     }
+  
+    public function attribute()
+    {
+        return $this->hasMany('App\Models\ServiceAttribute', 'service_id', 'id');
+    }
+
+
+    public function getProductAttribute(){
+        return $this->hasMany(ServiceAttribute::class,'service_id','id');
+    }
+
     
 
 }

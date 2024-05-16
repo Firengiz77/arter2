@@ -329,3 +329,18 @@ Route::post('disable-language', [LanguageController::class, 'disableLang'])->nam
           Route::get('customer/{id}/edit', [\App\Http\Controllers\CustomerController::class, 'edit'])->name('customer.edit'); 
 
       
+
+
+          Route::post('serviceattribute', [\App\Http\Controllers\ServiceAttributeController::class, 'store'])->name('serviceattribute.store'); 
+
+          Route::get('serviceattributes', [\App\Http\Controllers\ServiceAttributeController::class, 'index'])->name('serviceattribute.index'); 
+
+          Route::get('serviceattribute/create', [\App\Http\Controllers\ServiceAttributeController::class, 'create'])->name('serviceattribute.create'); 
+
+          Route::put('serviceattribute/{id}', [\App\Http\Controllers\ServiceAttributeController::class, 'update'])->name('serviceattribute.update'); 
+
+          Route::delete('serviceattribute/{id}', [\App\Http\Controllers\ServiceAttributeController::class, 'destroy'])->name('serviceattribute.destroy'); 
+
+          Route::get('serviceattribute/{id}/edit', [\App\Http\Controllers\ServiceAttributeController::class, 'edit'])->name('serviceattribute.edit'); 
+
+      

@@ -106,3 +106,12 @@
 [2024-05-10 14:36:25] local.INFO: File : C:\htdocs\arter2\resources\views\customer\index.blade.php created  
 [2024-05-10 14:36:25] local.INFO: File : C:\htdocs\arter2\resources\views\customer\edit.blade.php created  
 [2024-05-10 14:36:25] local.INFO: File : C:\htdocs\arter2\resources\views\customer\create.blade.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\App\Http\Controllers\ServiceAttributeController.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\App\Repositories\ServiceAttributeRepository.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\App\Models\ServiceAttribute.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\database\migrations\1715851475_create_serviceattribute_table.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\App\Http\Requests\\ServiceAttribute\StoreServiceAttributeRequest.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\App\Http\Requests\\ServiceAttribute\UpdateServiceAttributeRequest.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\resources\views\serviceattribute\index.blade.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\resources\views\serviceattribute\edit.blade.php created  
+[2024-05-16 13:24:35] local.INFO: File : C:\htdocs\arter2\resources\views\serviceattribute\create.blade.php created  
